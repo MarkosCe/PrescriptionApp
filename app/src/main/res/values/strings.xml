@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Prescription App</string>
+    <string name="saludo_inicio">¡Hola!</string>
+    <string name="content_descrip">Logo de la app</string>
+    <string name="content_descr_ferfil">Imagen de perfil</string>
+    <string name="nombre_usuario">Nombre de usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="boton_ingresar">Iniciar</string>
+    <string name="pregunta">¿No tienes una cuenta?</string>
+    <string name="registrarse_aqui">Registrate aquí</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="correo_elec">Correo electrónico</string>
+    <string name="cedula">Cédula profesional</string>
+    <string name="boton_registrar">Registrar</string>
+</resources>
