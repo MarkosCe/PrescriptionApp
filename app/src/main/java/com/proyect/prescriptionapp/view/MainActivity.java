@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,8 +27,8 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private Button iniciar;
-    private TextInputLayout nameUser;
-    private TextInputLayout password;
+    private TextInputEditText nameUser;
+    private TextInputEditText password;
 
     private CatalogRequest servicio = RetrofitHelper.getRetrofit().create(CatalogRequest.class);
 
@@ -43,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = Objects.requireNonNull(nameUser.getEditText()).getText().toString();
-                String pass = Objects.requireNonNull(password.getEditText()).getText().toString();
+                String name = nameUser.getText().toString();
+                String pass = password.getText().toString();
 
                 BodyLogin bodyLogin = new BodyLogin(name, pass);
                 Call<Usuario> listaUser = servicio.login(bodyLogin);
@@ -54,13 +55,14 @@ public class MainActivity extends AppCompatActivity {
                         if (response.isSuccessful()){
                             Toast.makeText(MainActivity.this, response.body().getNombre_completo(), Toast.LENGTH_SHORT).show();
                         }else {
-                            Toast.makeText(MainActivity.this, "ALgo falló...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "credenciales invalidas", Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Usuario> call, Throwable t) {
                         Toast.makeText(MainActivity.this, "Error de conexión", Toast.LENGTH_SHORT).show();
+                        Log.e("errorconexion", t.getMessage());
                     }
                 });
             }

@@ -1,13 +1,13 @@
 package com.proyect.prescriptionapp.data.model;
 
 public class Usuario {
-    private String id_usuario;
+    private int id_usuario;
     private String nombre_completo;
     private String nombre_usuario;
     private String password;
-    private String rol_id;
+    private int rol_id;
 
-    public Usuario(String id_usuario, String nombre_completo, String nombre_usuario, String password, String rol_id) {
+    public Usuario(int id_usuario, String nombre_completo, String nombre_usuario, String password, int rol_id) {
         this.id_usuario = id_usuario;
         this.nombre_completo = nombre_completo;
         this.nombre_usuario = nombre_usuario;
@@ -19,11 +19,11 @@ public class Usuario {
 
     }
 
-    public String getId_usuario() {
+    public int getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(String id_usuario) {
+    public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
     }
 
@@ -51,11 +51,11 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getRol_id() {
+    public int getRol_id() {
         return rol_id;
     }
 
-    public void setRol_id(String rol_id) {
+    public void setRol_id(int rol_id) {
         this.rol_id = rol_id;
     }
 }

@@ -8,6 +8,8 @@ import com.proyect.prescriptionapp.R;
 
 public class PacienteRegisterActivity extends AppCompatActivity {
 
+    private String saludo ="hola mundo";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

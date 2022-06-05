@@ -1,9 +1,7 @@
 package com.proyect.prescriptionapp.data.model;
 
-import com.google.gson.annotations.SerializedName;
 
 public class BodyLogin {
-    @SerializedName("id_medico")
     private String userName;
     private String password;
 
