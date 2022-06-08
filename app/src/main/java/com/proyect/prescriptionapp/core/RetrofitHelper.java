@@ -7,7 +7,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitHelper {
-    private static final String BASEURL = "http://192.168.0.106/API_amsterdan/public/api/";
+    private static final String BASEURL = "http://192.168.0.107/API_amsterdan/public/api/";
+    //private static final String BASEURL = "http://127.0.0.1:8000/api/";
     private static Retrofit retrofit;
     public static Retrofit getRetrofit(){
         if (retrofit == null){

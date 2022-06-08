@@ -11,6 +11,6 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface CatalogRequest {
-    @POST("login/")
+    @POST("login")
     Call<Usuario> login(@Body BodyLogin bodyLogin);
 }
